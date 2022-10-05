@@ -1,0 +1,4 @@
+alias power='date && sed "s/\(.\)$/.\1%/" <<< $((1000*$(cat /sys/class/power_supply/BAT0/charge_now)/$(cat /sys/class/power_supply/BAT0/charge_full)))'
+alias browser='startx $(which firefox)'
+eval "$(ssh-agent -s)"
+ssh-add $HOME/.ssh/git_ed25519
